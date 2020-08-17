@@ -1,10 +1,24 @@
 const forma = document.querySelector('.quiz-form');
 const displayScoreText = document.querySelector('#display-score');
 const scored = document.querySelector('#scored');
+const start = document.querySelector('.start-quiz-button');
+const quiz = document.querySelector('.quiz-form');
+const questions = document.querySelector('.welcome-display-toggled');
+const display = document.querySelector('#display-score');
 
 let answers = ['B', 'A', 'B']
 let correctAnswers = [];
 let score = 0;
+
+
+start.addEventListener('click', (e) => {
+    score = 0;
+    scored.innerText = '';
+    display.innerText = '';
+    quiz.classList.toggle('quiz-form')
+    questions.classList.toggle('.welcome-display-toggled')
+    scrollTo(0,600);
+});
 
 forma.addEventListener('submit', e => {
     e.preventDefault();
@@ -28,10 +42,11 @@ forma.addEventListener('submit', e => {
 
 
 const displayScore = (score) => {
-    if(score == 1) return scored.innerText = `33.3%`;
-    if (score == 2) return scored.innerText = `66.6%`;
-    if(score == 3) return scored.innerText = `100%`;
+    if(score == 1) return display.innerText = `You have scored 33.3%`;
+    if (score == 2) return display.innerText = `You have scored 66.6%`;
+    if (score == 3) return display.innerText = `You have scored 100%`;
 
+  
 }
 
 
