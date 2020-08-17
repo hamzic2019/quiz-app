@@ -189,3 +189,13 @@ body label {
 .option-input.radio::after {
     border-radius: 50%;
 }
+
+
+
+/* Adding css for mobile*/
+
+@media screen and (max-width: 600px) {
+    .quiz-question-asked {
+        font-size: 22px;
+    }
+}
