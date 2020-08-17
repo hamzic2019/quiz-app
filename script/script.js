@@ -1,13 +1,19 @@
 const forma = document.querySelector('.quiz-form');
-const answers = document.querySelectorAll('.option-input')
 
-//const answers = ['', '', ''];
+let answers = ['B', 'A', 'B']
+let correctAnswers = [];
 
 
 forma.addEventListener('submit', e => {
     e.preventDefault();
-    //console.log(e.target[0]);
-    //console.log(e.target);
 
-    console.log(forma.first.value)
+    correctAnswers.push(forma.first.value)
+    correctAnswers.push(forma.snd.value)
+    correctAnswers.push(forma.trd.value)
+
+    correctAnswers.forEach((answer, index) => {
+
+    });
+
+    correctAnswers = [];
 });
