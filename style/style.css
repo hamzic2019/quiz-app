@@ -31,10 +31,23 @@ body {
     text-align:center;
 }
 
+.display-result {
+    font-size: 50px;
+    text-align: center;
+    color:white;
+    font-family: 'Montserrat',
+    sans-serif;
+
+}
+
+.visibility-block {
+    display: none
+}
+
 .start-quiz-button{
     height: 60px!important;
     width:250px;
-    margin:25px auto!important;
+    margin:25px auto !important;
     font-size:25px;
     background-color:#FE4A49;
     color:white;
@@ -79,6 +92,8 @@ body label {
     display: block;
 
 }
+
+
 
 /* 
     #######################################################################
