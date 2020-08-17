@@ -17,7 +17,13 @@ start.addEventListener('click', (e) => {
     display.innerText = '';
     quiz.classList.toggle('quiz-form')
     questions.classList.toggle('.welcome-display-toggled')
-    scrollTo(0,600);
+    /*window.scrollTo({
+        top: 600,
+        behavior: 'smooth',
+    });*/
+    quiz.scrollIntoView({
+        behavior: 'smooth'
+    });
 });
 
 forma.addEventListener('submit', e => {
@@ -32,7 +38,10 @@ forma.addEventListener('submit', e => {
     });
 
     displayScoreText.classList.toggle('visibility-block');
-    scrollTo(0,0);
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+    });
 
     correctAnswers = [];
     
